@@ -191,13 +191,23 @@
   	\end{column}
   	\hfill
   	\begin{column}{0.05\paperwidth}
+    \@ifundefined{GitHubLogo}
+    {
+    }
+    {
     \centering
     \includegraphics*[width=\GitHubLogoWidth]{\GitHubLogo}
+    }
   	\end{column}
     \begin{column}{0.05\paperwidth}
+    \@ifundefined{GitHubUser}
+    {
+    }
+    {
     \begin{flushleft}
-    \texttt{wtbarnes}
+    \texttt{\GitHubUser}
     \end{flushleft}
+    }
     \end{column}
   	\begin{column}{0.2\paperwidth}
       \begin{flushright}
