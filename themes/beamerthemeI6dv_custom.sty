@@ -92,16 +92,28 @@
       \begin{column}{.03\paperwidth}
       \end{column}
       \begin{column}{.07\paperwidth}
-	  	\vspace{\LeftLogoPaddingTop}
+        \@ifundefined{\LeftLogoPaddingTop}
+        {
+        \vskip1cm
+        }
+        {
+        \vspace{\LeftLogoPaddingTop}
+        }
         \begin{center}
-			\@ifundefined{LeftLogo}
-			{
-			}
-			{
-			\includegraphics[width=\LeftLogoWidth\linewidth]{\LeftLogo}
-			}
+    			\@ifundefined{LeftLogo}
+    			{
+    			}
+    			{
+    			\includegraphics[width=\LeftLogoWidth\linewidth]{\LeftLogo}
+    			}
         \end{center}
+        \@ifundefined{\LeftLogoPaddingBottom}
+        {
+        \vskip1.5cm
+        }
+        {
         \vspace{\LeftLogoPaddingBottom}
+        }
       \end{column}
       \begin{column}{.675\paperwidth}
         \vskip4ex
