@@ -89,7 +89,7 @@
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline}
     \begin{columns}[T]
-      \begin{column}{.03\paperwidth}
+      \begin{column}{.02\paperwidth}
       \end{column}
       \begin{column}{.07\paperwidth}
         \@ifundefined{LeftLogoPaddingTop}
@@ -124,13 +124,30 @@
 		\vskip1ex
       \end{column}
       \begin{column}{.25\paperwidth}
+        \@ifundefined{RightLogoPaddingTop}
+        {
         \vskip1cm
+        }
+        {
+        \vspace{\RightLogoPaddingTop}
+        }
         \begin{center}
+          \@ifundefined{RightLogo}
+          {
+          }
+          {
           \includegraphics[width=\RightLogoWidth\linewidth]{\RightLogo}
+          }
         \end{center}
+        \@ifundefined{RightLogoPaddingBottom}
+        {
         \vskip1.5cm
+        }
+        {
+        \vspace{\RightLogoPaddingBottom}
+        }
       \end{column}
-      \begin{column}{.03\paperwidth}
+      \begin{column}{.02\paperwidth}
       \end{column}
     \end{columns}
   \end{beamercolorbox}
