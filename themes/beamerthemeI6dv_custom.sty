@@ -118,7 +118,7 @@
       \begin{column}{.675\paperwidth}
         \vskip4ex
         \raggedleft
-        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[2ex]}
+        \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[2.5ex]}
         \usebeamercolor{author in headline}{\color{fg}\large{\insertauthor}\\[1ex]}
         \usebeamercolor{institute in headline}{\color{fg}\large{\insertinstitute}\\[1ex]}
 		\vskip1ex
@@ -179,44 +179,44 @@
 
   \begin{beamercolorbox}[ht=4.5ex,leftskip=1cm,rightskip=1cm]{footline}%
 
-  \begin{columns}[c]
-    \begin{column}{0.02\paperwidth}
-    \end{column}
-  	\begin{column}{0.3\paperwidth}
-      \begin{flushleft}
-      Department of Physics and Astronomy - Rice University - Houston, TX
-      \end{flushleft}
-    \end{column}
-  	\begin{column}{0.35\paperwidth}
-  	\end{column}
-  	\hfill
-  	\begin{column}{0.05\paperwidth}
-    \@ifundefined{GitHubLogo}
-    {
-    }
-    {
-    \centering
-    \includegraphics*[width=\GitHubLogoWidth]{\GitHubLogo}
-    }
-  	\end{column}
-    \begin{column}{0.05\paperwidth}
-    \@ifundefined{GitHubUser}
-    {
-    }
-    {
-    \begin{flushleft}
-    \texttt{\GitHubUser}
-    \end{flushleft}
-    }
-    \end{column}
-  	\begin{column}{0.2\paperwidth}
-      \begin{flushright}
-  		Mail: \texttt{will.t.barnes@rice.edu}
-      \end{flushright}
-  	\end{column}
-    \begin{column}{0.02\paperwidth}
-    \end{column}
-  \end{columns}
+    \begin{columns}[T]
+      \begin{column}{0.02\paperwidth}
+      \end{column}
+    	\begin{column}{0.3\paperwidth}
+        \begin{flushleft}
+          Department of Physics and Astronomy - Rice University - Houston, TX
+        \end{flushleft}
+      \end{column}
+    	\begin{column}{0.35\paperwidth}
+    	\end{column}
+    	\hfill
+    	\begin{column}{0.05\paperwidth}
+        \@ifundefined{GitHubLogo}
+        {
+        }
+        {
+          \centering
+          \includegraphics*[width=\GitHubLogoWidth]{\GitHubLogo}
+        }
+    	\end{column}
+      \begin{column}{0.05\paperwidth}
+        \@ifundefined{GitHubUser}
+        {
+        }
+        {
+          \begin{flushleft}
+          \texttt{\GitHubUser}
+          \end{flushleft}
+        }
+      \end{column}
+    	\begin{column}{0.2\paperwidth}
+        \begin{flushright}
+      		Mail: \texttt{will.t.barnes@rice.edu}
+        \end{flushright}
+    	\end{column}
+      \begin{column}{0.02\paperwidth}
+      \end{column}
+    \end{columns}
 
   %	Department of Physics and Astronomy - Rice University - Houston, TX \hfill \includegraphics*[width=\GitHubLogoWidth]{\GitHubLogo}~~\texttt{wtbarnes} \quad\quad Mail: \texttt{will.t.barnes@rice.edu}
   %  \vskip0.75ex
