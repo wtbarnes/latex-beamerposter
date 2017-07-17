@@ -92,56 +92,61 @@
       \begin{column}{.02\paperwidth}
       \end{column}
       % Left logos
-      \begin{column}{.07\paperwidth}
-        % First left logo
-        \@ifundefined{LeftLogoPaddingTop}
-        {
-        \vskip1cm
-        }
-        {
-        \vspace{\LeftLogoPaddingTop}
-        }
-        \begin{center}
-    			\@ifundefined{LeftLogo}
-    			{
-    			}
-    			{
-    			\includegraphics[width=\LeftLogoWidth\linewidth]{\LeftLogo}
-    			}
-        \end{center}
-        \@ifundefined{LeftLogoPaddingBottom}
-        {
-        \vskip1.5cm
-        }
-        {
-        \vspace{\LeftLogoPaddingBottom}
-        }
-      \end{column}
+      \@ifundefined{LeftLogo}
+      {
+      }
+      {
+        \begin{column}{\LeftLogoWidth\linewidth}
+          % First left logo
+          \@ifundefined{LeftLogoPaddingTop}
+          {
+          \vskip1cm
+          }
+          {
+          \vspace{\LeftLogoPaddingTop}
+          }
+          \begin{center}
+            \@ifundefined{LeftLogo}
+            {
+            }
+            {
+            \includegraphics[width=\LeftLogoWidth\linewidth]{\LeftLogo}
+            }
+          \end{center}
+          \@ifundefined{LeftLogoPaddingBottom}
+          {
+          \vskip1.5cm
+          }
+          {
+          \vspace{\LeftLogoPaddingBottom}
+          }
+        \end{column}
+      }
       % Second left logo (if specified)
       \@ifundefined{AnotherLeftLogo}
       {
       }
       {
-        \begin{column}{.07\paperwidth}
-        \@ifundefined{AnotherLeftLogoPaddingTop}
-        {
-        \vskip1cm
-        }
-        {
-        \vspace{\AnotherLeftLogoPaddingTop}
-        }
-        \begin{center}
-        {
-          \includegraphics[width=\AnotherLeftLogoWidth\linewidth]{\AnotherLeftLogo}
-        }
-        \end{center}
-        \@ifundefined{AnotherLeftLogoPaddingBottom}
-        {
-        \vskip1.5cm
-        }
-        {
-        \vspace{\AnotherLeftLogoPaddingBottom}
-        }
+        \begin{column}{\AnotherLeftLogoWidth\linewidth}
+          \@ifundefined{AnotherLeftLogoPaddingTop}
+          {
+          \vskip1cm
+          }
+          {
+          \vspace{\AnotherLeftLogoPaddingTop}
+          }
+          \begin{center}
+          {
+            \includegraphics[width=\AnotherLeftLogoWidth\linewidth]{\AnotherLeftLogo}
+          }
+          \end{center}
+          \@ifundefined{AnotherLeftLogoPaddingBottom}
+          {
+          \vskip1.5cm
+          }
+          {
+          \vspace{\AnotherLeftLogoPaddingBottom}
+          }
         \end{column}
       }
       % Title, authors, and affiliations
