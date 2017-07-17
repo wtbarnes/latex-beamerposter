@@ -89,14 +89,14 @@
 
   \begin{beamercolorbox}[wd=\paperwidth]{headline}
     \begin{columns}[T]
-      %\begin{column}{.02\paperwidth}
-      %\end{column}
+      \begin{column}{.02\paperwidth}
+      \end{column}
       % Left logos
       \@ifundefined{LeftLogo}
       {
       }
       {
-        \begin{column}{\LeftLogoWidth\linewidth}
+        \begin{column}{\LeftLogoWidth\paperwidth}
           % First left logo
           \@ifundefined{LeftLogoPaddingTop}
           {
@@ -110,7 +110,7 @@
             {
             }
             {
-            \includegraphics[height=\LeftLogoWidth\linewidth]{\LeftLogo}
+            \includegraphics[width=\LeftLogoWidth\paperwidth]{\LeftLogo}
             }
           \end{center}
           \@ifundefined{LeftLogoPaddingBottom}
@@ -127,7 +127,7 @@
       {
       }
       {
-        \begin{column}{\AnotherLeftLogoWidth\linewidth}
+        \begin{column}{\AnotherLeftLogoWidth\paperwidth}
           \@ifundefined{AnotherLeftLogoPaddingTop}
           {
           \vskip1cm
@@ -137,7 +137,7 @@
           }
           \begin{center}
           {
-            \includegraphics[height=\AnotherLeftLogoWidth\linewidth]{\AnotherLeftLogo}
+            \includegraphics[width=\AnotherLeftLogoWidth\paperwidth]{\AnotherLeftLogo}
           }
           \end{center}
           \@ifundefined{AnotherLeftLogoPaddingBottom}
@@ -150,7 +150,7 @@
         \end{column}
       }
       % Title, authors, and affiliations
-      \begin{column}{.575\paperwidth}
+      \begin{column}{\TitleWidth\paperwidth}
         \vskip4ex
         \raggedleft
         \usebeamercolor{title in headline}{\color{fg}\textbf{\LARGE{\inserttitle}}\\[2.5ex]}
@@ -159,7 +159,11 @@
 		    \vskip1ex
       \end{column}
       % Right logo (usually the institution)
-      \begin{column}{.25\paperwidth}
+      \@ifundefined{RightLogo}
+      {
+      }
+      {
+        \begin{column}{\RightLogoWidth\paperwidth}
         \@ifundefined{RightLogoPaddingTop}
         {
         \vskip1cm
@@ -168,12 +172,7 @@
         \vspace{\RightLogoPaddingTop}
         }
         \begin{center}
-          \@ifundefined{RightLogo}
-          {
-          }
-          {
-          \includegraphics[width=\RightLogoWidth\linewidth]{\RightLogo}
-          }
+          \includegraphics[width=\RightLogoWidth\paperwidth]{\RightLogo}
         \end{center}
         \@ifundefined{RightLogoPaddingBottom}
         {
@@ -182,9 +181,10 @@
         {
         \vspace{\RightLogoPaddingBottom}
         }
+        \end{column}
+      }
+      \begin{column}{.02\paperwidth}
       \end{column}
-      %\begin{column}{.02\paperwidth}
-      %\end{column}
     \end{columns}
   \end{beamercolorbox}
 
