@@ -92,7 +92,7 @@
       \begin{column}{.02\paperwidth}
       \end{column}
       % Left logos
-      \begin{column}{.14\paperwidth}
+      \begin{column}{.07\paperwidth}
         % First left logo
         \@ifundefined{LeftLogoPaddingTop}
         {
@@ -116,31 +116,33 @@
         {
         \vspace{\LeftLogoPaddingBottom}
         }
-        % Second left logo (if specified)
-        \@ifundefined{AnotherLeftLogo}
+      \end{column}
+      % Second left logo (if specified)
+      \@ifundefined{AnotherLeftLogo}
+      {
+      }
+      {
+      \begin{column}{.07\paperwidth}
+        \@ifundefined{AnotherLeftLogoPaddingTop}
         {
+        \vskip1cm
         }
         {
-          \@ifundefined{AnotherLeftLogoPaddingTop}
-          {
-          \vskip1cm
-          }
-          {
-          \vspace{\AnotherLeftLogoPaddingTop}
-          }
-          \begin{center}
-          {
-            \includegraphics[width=\AnotherLeftLogoWidth\linewidth]{\AnotherLeftLogo}
-          }
-          \end{center}
-          \@ifundefined{AnotherLeftLogoPaddingBottom}
-          {
-          \vskip1.5cm
-          }
-          {
-          \vspace{\AnotherLeftLogoPaddingBottom}
-          }
+        \vspace{\AnotherLeftLogoPaddingTop}
         }
+        \begin{center}
+        {
+          \includegraphics[width=\AnotherLeftLogoWidth\linewidth]{\AnotherLeftLogo}
+        }
+        \end{center}
+        \@ifundefined{AnotherLeftLogoPaddingBottom}
+        {
+        \vskip1.5cm
+        }
+        {
+        \vspace{\AnotherLeftLogoPaddingBottom}
+        }
+      }
       \end{column}
       % Title, authors, and affiliations
       \begin{column}{.675\paperwidth}
