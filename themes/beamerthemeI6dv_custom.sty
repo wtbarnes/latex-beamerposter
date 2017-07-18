@@ -221,7 +221,12 @@
     	\begin{column}{0.3\paperwidth}
         \vspace{-3.5ex}
         \begin{flushleft}
-          Department of Physics and Astronomy - Rice University - Houston, TX
+          \@ifundefined{AffiliationFooter}
+          {
+          }
+          {
+          \AffiliationFooter
+          }
         \end{flushleft}
       \end{column}
     	\begin{column}{0.45\paperwidth}
@@ -251,7 +256,12 @@
     	\begin{column}{0.15\paperwidth}
         \vspace{-3.75ex}
         \begin{flushright}
-      		Mail: \texttt{will.t.barnes@rice.edu}
+        \@ifundefined{EmailAddressFooter}
+        {
+        }
+        {
+          Mail: \texttt{\EmailAddressFooter}
+        }
         \end{flushright}
     	\end{column}
       \begin{column}{0.02\paperwidth}
